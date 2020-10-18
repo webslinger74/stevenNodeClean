@@ -1,13 +1,22 @@
-const dotenv = require('dotenv');
+const dotenv = require('dotenv');   // this is used to allow env variables in the .env file be passed
 dotenv.config();
+
+// setup of the express server
 const express = require('express');
 const app = express();
+
+// this is used to obtain variables from front end such as in forms and attach the named variable to the body object req.body.name
 const bodyParser = require('body-parser')
+
 const mustacheExpress = require('mustache-express');
 var kudos = require('./routes/kudos');
 const nominees = require('./routes/nominees');
 const mongoClient = require('./mongoConnection');
+
+// this sets up the static folders from the public so css can be easily loaded from the public folder at run time.
 app.use(express.static(__dirname + '/public'));
+
+//this sets up mustache as template engine and sets the views folder for easy rendering of templates from this folder
 app.engine('html', mustacheExpress());
 app.set('view engine', 'html');
 app.set('views', __dirname + '/views');
