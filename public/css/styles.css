@@ -1,0 +1,25 @@
+#button_one {
+   font-size: 40px; 
+   color:blue;
+   background-color: blueviolet;
+}
+
+.title1 {
+    font-size: 80px;
+}
+
+.title2 {
+    font-size: 40px;
+    color:red;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 80px;
+}
+
+#myButton {
+    background-color: white;
+    color:red;
+    font-size:25px;
+}
