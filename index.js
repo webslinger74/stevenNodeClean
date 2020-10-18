@@ -9,8 +9,12 @@ const app = express();
 const bodyParser = require('body-parser')
 
 const mustacheExpress = require('mustache-express');
+
+// add extra routes to be used via express.Router
 var kudos = require('./routes/kudos');
 const nominees = require('./routes/nominees');
+
+// imports the mongoConnection deetails
 const mongoClient = require('./mongoConnection');
 
 // this sets up the static folders from the public so css can be easily loaded from the public folder at run time.
